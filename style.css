@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
+
+:root{
+    --line-border-fill: #3498db;
+    --line-border-empty: #e0e0e0;
+    --fav--color: rgb(243, 240, 42);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body{
+
+    font-family: 'Ubuntu',sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+}
+
+.bg{
+    background: url(img/music.jpeg) no-repeat center center/cover;
+    position: absolute;
+    top: -30px;
+    left: -30px;
+    width: calc(100vw + 60px);
+    height: calc(100vh + 60px);
+    z-index: -1;
+    filter: blur(30px);
+}
+
+.loading-text{
+    font-size: 50px;
+    color: var(--fav--color);
+}
+
+.btn{
+    border: none;
+    border-radius: 5px;
+    background-color: transparent;
+    color: rgb(243, 240, 42);
+    padding: 15px 30px;
+    font-size: 20px;
+    font-family: inherit;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: 0.2s ease;
+    position: fixed;
+    top: 20px;
+}
+ 
+.btn:hover{
+    background-color: transparent;
+}
+ 
+.btn:disabled{
+    transform: scale(0);
+}
+
+@media (max-width: 768px) {
+    .bg {
+      background-position: 35%;
+    }
+  }
